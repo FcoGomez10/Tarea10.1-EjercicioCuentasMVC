@@ -1,0 +1,52 @@
+﻿@model Cuentas.Models.Cuenta
+
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h1>Detalle de la Cuenta</h1>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-warning text-white">
+        <h4 class="mb-0">Información de la Cuenta</h4>
+    </div>
+    <div class="card-body">
+
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="align-middle" style="width: 30%;">Cuenta</th>
+                    <td>@Html.DisplayFor(model => model.numero)</td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Descripción</th>
+                    <td>@Html.DisplayFor(model => model.descripcion)</td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Créditos</th>
+                    <td>@Html.DisplayFor(model => model.creditos)</td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Débitos</th>
+                    <td>@Html.DisplayFor(model => model.debitos)</td>
+                </tr>
+                <tr class="table-info">
+                    <th class="align-middle">Balance</th>
+                    <td>@Html.DisplayFor(model => model.balance)</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.id" class="btn btn-primary">
+        <i class="btn-primary"></i> Editar
+    </a>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="btn-secondary"></i> Regresar a la Lista
+    </a>
+</div>

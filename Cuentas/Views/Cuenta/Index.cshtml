@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Cuentas.Models.Cuenta>
+
+@{
+    ViewData["Title"] = "Cuentas";
+}
+
+<h1 class="mb-4 text-center">Transacciones</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Registro</a>
+</p>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+
+                    <h5 class="card-title">Cta. @item.numero</h5>
+
+                    <p class="card-text mb-1">
+                        <strong>Descripción:</strong> @item.descripcion
+                    </p>
+                    <p class="card-text mb-1">
+                        <strong>Créditos:</strong> @item.creditos
+                    </p>
+                    <p class="card-text mb-1">
+                        <strong>Débitos:</strong> @item.debitos
+                    </p>
+                    <p class="card-text mb-3">
+                        <strong>Balance:</strong> @item.balance
+                    </p>
+                    <p class="card-text mb-1">
+                        <strong>Estado:</strong> @(item.balance < 0 ? "Inactivo" : "Activo")
+                    </p>
+
+                    <div class="d-flex gap-2">
+                        @if (item.balance >= 0)
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-secondary btn-sm">
+                                Editar
+                            </a>
+                        }
+                         else
+                        {
+                            <button class="btn btn-secondary btn-sm" disabled>
+                                Editar
+                            </button>
+                        }
+
+
+                        <a asp-action="Details" asp-route-id="@item.id" class="btn btn-success btn-sm">
+                            Detalle
+                        </a>
+
+                        <a asp-action="Delete" asp-route-id="@item.id" class="btn btn-danger btn-sm">
+                            Eliminar
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
