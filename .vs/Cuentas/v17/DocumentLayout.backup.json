@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E0FEFBE7-D72D-4551-B625-8D8222E7809E}|Cuentas\\Cuentas.csproj|c:\\users\\user\\documents\\github\\tarea10.1-ejerciciocuentasmvc\\cuentas\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0FEFBE7-D72D-4551-B625-8D8222E7809E}|Cuentas\\Cuentas.csproj|solutionrelative:cuentas\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E0FEFBE7-D72D-4551-B625-8D8222E7809E}|Cuentas\\Cuentas.csproj|c:\\users\\user\\documents\\github\\tarea10.1-ejerciciocuentasmvc\\cuentas\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0FEFBE7-D72D-4551-B625-8D8222E7809E}|Cuentas\\Cuentas.csproj|solutionrelative:cuentas\\controllers\\movimientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,12 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CuentaController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\Controllers\\CuentaController.cs",
+              "RelativeDocumentMoniker": "Cuentas\\Controllers\\CuentaController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\Controllers\\CuentaController.cs",
+              "RelativeToolTip": "Cuentas\\Controllers\\CuentaController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAuwG0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T23:49:00.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MovimientoController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\Controllers\\MovimientoController.cs",
               "RelativeDocumentMoniker": "Cuentas\\Controllers\\MovimientoController.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\Controllers\\MovimientoController.cs",
               "RelativeToolTip": "Cuentas\\Controllers\\MovimientoController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAcwEUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAuwEUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T23:21:56.641Z",
               "EditorCaption": ""

@@ -99,7 +99,7 @@ namespace Cuentas.Controllers
             {
                 try
                 {
-                    // Obtener el registro original de la base de datos
+                    
                     var cuentaDb = await _context.Cuenta.FindAsync(id);
 
                     if (cuentaDb == null)
@@ -107,7 +107,7 @@ namespace Cuentas.Controllers
                         return NotFound();
                     }
 
-                    // ÚNICAMENTE se permite modificar la descripción
+                    
                     cuentaDb.descripcion = cuenta.descripcion;
 
                     _context.Update(cuentaDb);
