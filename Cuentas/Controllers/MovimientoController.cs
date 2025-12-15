@@ -56,15 +56,22 @@ namespace Cuentas.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Tipo,Concepto,Monto,Fecha,IdCuenta")] Movimiento movimiento)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                //var cuenta = _context.Cuenta.Where( x => x.id == movimiento.IdCuenta).First();
+                return View(movimiento);
+            }
+
+            var cuenta = await _context.Cuenta.FirstOrDefaultAsync(m => m.id == movimiento.IdCuenta);
+
+            if (cuenta == null || cuenta.balance <= 0)
+            {
+                ModelState.AddModelError("", "No es posible registrar el movimiento, cuenta inactiva.");
+                return View(movimiento);
+            }
 
                 _context.Add(movimiento);
 
-                var cuenta = await _context.Cuenta.FirstOrDefaultAsync(m => m.id == movimiento.IdCuenta);
-
-                if(cuenta != null)
+            if (cuenta != null)
                 {
                     if (movimiento.Tipo == 1)
                     {
@@ -82,8 +89,9 @@ namespace Cuentas.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(movimiento);
-        }
+       
+       
+        
 
         // GET: Movimiento/Edit/5
         public async Task<IActionResult> Edit(int? id)

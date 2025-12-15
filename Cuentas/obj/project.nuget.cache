@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K0MM/9bBGa8=",
+  "dgSpecHash": "ABIEKONu5cg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Documents\\GitHub\\Cuentas\\Cuentas\\Cuentas.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\Cuentas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

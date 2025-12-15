@@ -7356,11 +7356,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\Cuentas\\Cuentas\\Cuentas.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\Cuentas.csproj",
       "projectName": "Cuentas",
-      "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\Cuentas\\Cuentas\\Cuentas.csproj",
+      "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\Cuentas.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\Cuentas\\Cuentas\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\Tarea10.1-EjercicioCuentasMVC\\Cuentas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

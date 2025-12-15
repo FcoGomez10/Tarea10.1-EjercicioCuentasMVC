@@ -88,7 +88,7 @@ namespace Cuentas.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id, descripcion")] Cuenta cuenta)
+        public async Task<IActionResult> Edit(int id, [Bind("id,descripcion")] Cuenta cuenta)
         {
             if (id != cuenta.id)
             {
@@ -97,20 +97,20 @@ namespace Cuentas.Controllers
 
             if (ModelState.IsValid)
             {
-                var cuentaOriginal = await _context.Cuenta.FindAsync(id);
-
-                if (cuentaOriginal == null)
-                {
-                    return NotFound();
-                }
-
                 try
                 {
-                    
-                    cuentaOriginal.descripcion = cuenta.descripcion;
+                    // Obtener el registro original de la base de datos
+                    var cuentaDb = await _context.Cuenta.FindAsync(id);
 
-                    
-                    _context.Update(cuentaOriginal);
+                    if (cuentaDb == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // ÚNICAMENTE se permite modificar la descripción
+                    cuentaDb.descripcion = cuenta.descripcion;
+
+                    _context.Update(cuentaDb);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -124,11 +124,11 @@ namespace Cuentas.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
 
-            var cuentaParaVista = await _context.Cuenta.AsNoTracking().FirstOrDefaultAsync(c => c.id == id);
-            return View(cuentaParaVista);
+            return View(cuenta);
         }
 
         // GET: Cuenta/Delete/5

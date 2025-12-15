@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cuentas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f624ea4a9f60fa557aca9ebc5df890368cc3f513")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cuentas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cuentas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
